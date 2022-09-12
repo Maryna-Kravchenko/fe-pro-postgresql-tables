@@ -39,7 +39,7 @@ export const createStructure = async () => {
   );
 
   await client.query(
-    `CREATE TABLE books (id SERIAL PRIMARY KEY NOT NULL, title VARCHAR(30) NOT NULL, userid INTEGER, authorid INTEGER, categoryid INTEGER, FOREIGN KEY(userid) REFERENCES users(id) ON DELETE CASCADE, FOREIGN KEY(authorid) REFERENCES authors(id) ON DELETE CASCADE, FOREIGN KEY(categoryid) REFERENCES categories(id) ON DELETE CASCADE`
+    `CREATE TABLE books (id SERIAL PRIMARY KEY NOT NULL, title VARCHAR(30) NOT NULL, userid INTEGER, authorid INTEGER, categoryid INTEGER, FOREIGN KEY(userid) REFERENCES users(id) ON DELETE CASCADE, FOREIGN KEY(authorid) REFERENCES authors(id) ON DELETE CASCADE, FOREIGN KEY(categoryid) REFERENCES categories(id) ON DELETE CASCADE)`
   );
 
   await client.query(
